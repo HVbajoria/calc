@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="calc">
+    <div class="header">
+      <div class="titles">
+        Simple Calculator
+      </div>
+    </div>
+    <div class="display">
+      <div class="display-indicate">
+        max
+      </div>
+      <div class="display-main">
+        0
+      </div>
+      
+      <div class="display-operations">
+        0
+      </div>
+    </div>
+
+	<form action="calculator.jsp" method="post" name="calculator">
+	<input type="hidden" name="hdnbt" />
+    <div class="row">
+      <input class = "button ac" name="buttonac" type="reset" value="Reset">
+      <input class="button div" name="buttondiv" type="button" value="%"  onclick="{document.forms.calculator.hdnbt.value+=this.value;}" >
+      <input class="button mult" name = "buttonmult" type="button" value="*" onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+    </div>
+
+    <div class="row">
+      <input class="button seven" name="buttonseven" type="button" value="7" onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+      <input class="button eight" name="buttoneight" type="button" value="8" onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+      <input class="button nine" name="buttonnine" type="button" value="9" onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+      <input class="button minus" name="buttonminus" type="button" value="-" onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+    </div>
+
+    <div class="row">
+      <input class="button four" name="buttonfour" type="button" value="4" onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+      <input class="button five" name = "buttonfive" type="reset" value="5" onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+      <input class="button six" name ="buttonsix" type="reset" value="6" onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+      <input class="button plus" name="buttonplus" type="button" value="+" onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+    </div>
+
+    <div class="bottom-row">
+      <div class="left">
+        <div class="row">
+          <input class="button one" name="button one" type="button" value="1" onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+          <input class="button two" name="button two" type="button" value="2" onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+          <input class="button three" name="button three" type="button" value="3" onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+        </div>
+        
+        <div class="row">
+          <input class="button zero" name="button zero" type="submit" value="0" onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+          <input class="button dot" name = "button dot" type="button" value="." onclick="{document.forms.calculator.hdnbt.value+=this.value;}">
+        </div>
+      </div>
+      
+      <div class="right">
+        <input type="submit" value="Submit" class="button eq">
+      </div>
+
+    </div>
+	</form>
+  </div>
+  <div class="tips">
+    <div class="hint">For All Clean <span class="hint-sel">AC</span> use <span class="hint-btn">Delete</span> button.</div>
+    <div class="hint">For Cancel Entry <span class="hint-sel">CE</span> use <span class="hint-btn">End</span> button.</div>
+   </div>
+</div>
+</body>
+</html>
