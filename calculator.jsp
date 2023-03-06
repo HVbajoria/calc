@@ -13,7 +13,7 @@
 	double result=0.0;
 	EvaluateString obj=new EvaluateString();
 	%>
-	
+	<%s=request.getParameter("hdnbt");  %>
 <div class="container">
   <div class="calc">
     <div class="header">
@@ -26,12 +26,12 @@
         max
       </div>
       <div class="display-main">
-          <% result=obj.input(s);
+          <% result=obj.evaluate(s);
           out.println(result);%>
       </div>
       
       <div class="display-operations">
-         <% s=request.getParameter("hdnbt"); 
+         <% 
          out.println(s); %>
       </div>
     </div>

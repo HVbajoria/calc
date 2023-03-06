@@ -145,11 +145,5 @@ public class EvaluateString
 		}
 		return 0;
 	}
-
-	// Driver method to test above methods
-	public double input(String s)
-	{
-		return evaluate(s);
-	}
 }
 
