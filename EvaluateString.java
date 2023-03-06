@@ -8,13 +8,13 @@ import java.util.Stack;
 
 public class EvaluateString
 {
-	public static int evaluate(String expression)
+	public double evaluate(String expression)
 	{
 		char[] tokens = expression.toCharArray();
 
 		// Stack for numbers: 'values'
-		Stack<Integer> values = new
-							Stack<Integer>();
+		Stack<Double> values = new
+							Stack<Double>();
 
 		// Stack for Operators: 'ops'
 		Stack<Character> ops = new
@@ -42,7 +42,7 @@ public class EvaluateString
 						tokens[i] >= '0' &&
 						tokens[i] <= '9')
 					sbuf.append(tokens[i++]);
-				values.push(Integer.parseInt(sbuf.
+				values.push(Double.parseDouble(sbuf.
 									toString()));
 			
 				// right now the i points to
@@ -110,7 +110,7 @@ public class EvaluateString
 	// Returns true if 'op2' has higher
 	// or same precedence as 'op1',
 	// otherwise returns false.
-	public static boolean hasPrecedence(
+	public boolean hasPrecedence(
 						char op1, char op2)
 	{
 		if (op2 == '(' || op2 == ')')
@@ -125,8 +125,8 @@ public class EvaluateString
 	// A utility method to apply an
 	// operator 'op' on operands 'a'
 	// and 'b'. Return the result.
-	public static int applyOp(char op,
-						int b, int a)
+	public double applyOp(char op,
+						double b, double a)
 	{
 		switch (op)
 		{
@@ -147,16 +147,9 @@ public class EvaluateString
 	}
 
 	// Driver method to test above methods
-	public static void main(String[] args)
+	public double input(String s)
 	{
-		System.out.println(EvaluateString.
-						evaluate("10 + 2 * 6"));
-		System.out.println(EvaluateString.
-					evaluate("100 * 2 + 12"));
-		System.out.println(EvaluateString.
-				evaluate("100 * ( 2 + 12 )"));
-		System.out.println(EvaluateString.
-			evaluate("100 * ( 2 + 12 ) / 14"));
+		return evaluate(s);
 	}
 }
 

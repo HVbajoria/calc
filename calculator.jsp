@@ -1,5 +1,6 @@
+<%@ page import="hv.EvaluateString" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +9,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<%! String s=" ";
+<%! String s="";
 	double result=0.0;
+	EvaluateString obj=new EvaluateString();
 	%>
 	
 <div class="container">
@@ -24,8 +26,8 @@
         max
       </div>
       <div class="display-main">
-         <% 
-         out.println(result); %>
+          <% result=obj.input(s);
+          out.println(result);%>
       </div>
       
       <div class="display-operations">
